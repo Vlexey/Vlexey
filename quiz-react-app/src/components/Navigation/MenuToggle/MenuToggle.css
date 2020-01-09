@@ -1,0 +1,86 @@
+.MenuToggle {
+  position: absolute;
+}
+
+.toggleHamburger {
+  background-color: transparent;
+  color: black;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  border-radius: none;
+  z-index: 70;
+  cursor: pointer;
+  transition: background 0.3s;
+  /* --- animate to X --- */
+}
+.toggleHamburger:focus {
+  outline: none;
+}
+.toggleHamburger span {
+  display: block;
+  position: absolute;
+  top: 27.5px;
+  left: 15px;
+  right: 15px;
+  height: 5px;
+  background: #000;
+}
+.toggleHamburger span::before, .toggleHamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  content: "";
+}
+.toggleHamburger span::before {
+  top: -10px;
+}
+.toggleHamburger span::after {
+  bottom: -10px;
+}
+.toggleHamburger.toggleHamburger__animx {
+  background-color: #FFF;
+  /* when menu open: */
+}
+.toggleHamburger.toggleHamburger__animx span {
+  transition: background 0s 0.3s;
+}
+.toggleHamburger.toggleHamburger__animx span::before, .toggleHamburger.toggleHamburger__animx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+.toggleHamburger.toggleHamburger__animx span::before {
+  transition-property: top, transform;
+}
+.toggleHamburger.toggleHamburger__animx span::after {
+  transition-property: bottom, transform;
+}
+.toggleHamburger.toggleHamburger__animx.isActive span {
+  background: none;
+}
+.toggleHamburger.toggleHamburger__animx.isActive span::before, .toggleHamburger.toggleHamburger__animx.isActive span::after {
+  background-color: black;
+  transition-delay: 0s, 0.3s;
+}
+.toggleHamburger.toggleHamburger__animx.isActive span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.toggleHamburger.toggleHamburger__animx.isActive span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/*# sourceMappingURL=MenuToggle.css.map */

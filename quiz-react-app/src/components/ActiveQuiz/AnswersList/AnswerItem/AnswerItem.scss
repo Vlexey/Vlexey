@@ -1,0 +1,18 @@
+.AnswerItem {
+  border-bottom: 2px solid black;
+  padding: 10px 10px;
+  cursor: pointer;
+  background-color: rgba(255,255,255, 0);
+
+  transition: background-color .2s linear;
+
+  &:hover {
+    background-color: rgba(255,255,255, .2);
+  }
+  &--success {
+    background-color: #d7b98c;
+  }
+  &--error {
+    background-color: #df0d00;
+  }
+}

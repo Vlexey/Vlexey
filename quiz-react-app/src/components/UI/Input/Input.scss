@@ -1,0 +1,49 @@
+.Input {
+  margin-bottom: 25px;
+  position: relative;
+  label {
+    margin-bottom: 3px;
+    padding: 0;
+    display: block;
+    font-weight: bold;
+  }
+  input {
+    display: block;
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 8px 10px 8px 10px;
+    margin: 0 0 5px;
+    width: 100%;
+    outline: none;
+    background: transparent;
+
+    transition: all .3s linear;
+    &:hover {
+      background: rgba(255,255,255, .2);
+    }
+    &:focus {
+      background: rgba(0,0,0, .1);
+    }
+    &:active {
+      background: rgba(0,0,0, .1);
+    }
+  }
+  &.invalid label {
+    color: darkred;
+  }
+  &.invalid input {
+    border-color: darkred;
+  }
+  small {
+    position: absolute;
+    bottom: -20px;
+    left: 5px;
+
+    color: black;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: -5px;
+  }
+
+}
